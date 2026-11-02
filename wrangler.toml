@@ -1,0 +1,9 @@
+# links — encurtador: links.pedalhidrografi.co/<nome> → destino em links.js.
+# Deploy: npx wrangler deploy (precisa de `npx wrangler login`).
+name = "links"
+main = "worker.js"
+compatibility_date = "2026-09-01"
+workers_dev = false
+
+# Custom domain: a Cloudflare cria o registro DNS e o certificado sozinha.
+routes = [{ pattern = "links.pedalhidrografi.co", custom_domain = true }]
